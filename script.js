@@ -5,10 +5,10 @@ let numberCol = 10;
 
 let A = new Array(numberRow);
 
-for(i = 0; i < A.length; i++) {
+for(let i = 0; i < A.length; i++) {
     A[i] = new Array (numberCol);
     
-    for(j = 0; j < A[i].length; j++) {
+    for(let j = 0; j < A[i].length; j++) {
         A[i][j] = Math.floor(Math.random() * 41 - 20);
 
         document.write(A[i][j] + ' ');
@@ -21,12 +21,12 @@ for(let row = 0; row < A.length; row++) {
 
     let checkSum = 0;
 
-    for(col = 0; col < A.length; col++){
+    for(let col = 0; col < A.length; col++){
        checkSum += A[col][row];
     }
     
     if(checkSum < 0) {
-        for(colDel = 0; colDel < A.length; colDel++) {
+        for(let colDel = 0; colDel < A.length; colDel++) {
             A[colDel].splice([row], 1)
         }
         row--; // refresh 
